@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="converter">
+        <div class="thermometer">🌡️</div>
+        <h1>Temperature Converter</h1>
+        <p class="subtitle">Convert Celsius, Fahrenheit and Kelvin</p>
+
+        <form id="converterForm">
+            <label for="temperature">Enter temperature</label>
+            <input
+                type="number"
+                id="temperature"
+                step="any"
+                placeholder="e.g. 25"
+                required
+            >
+
+            <label for="unit">Choose input unit</label>
+            <select id="unit">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+            </select>
+
+            <button type="submit">Convert Temperature</button>
+        </form>
+
+        <p id="message" role="alert" aria-live="polite"></p>
+
+        <section id="results" class="results" aria-live="polite" hidden>
+            <h2>Conversion Results</h2>
+            <div class="result-row">
+                <span>Celsius</span>
+                <strong id="celsiusResult">—</strong>
+            </div>
+            <div class="result-row">
+                <span>Fahrenheit</span>
+                <strong id="fahrenheitResult">—</strong>
+            </div>
+            <div class="result-row">
+                <span>Kelvin</span>
+                <strong id="kelvinResult">—</strong>
+            </div>
+        </section>
+
+        <p class="note">Note: Temperature cannot be below absolute zero.</p>
+    </main>
+
+    <footer>Temperature Converter | Web Development Assignment</footer>
+</body>
+</html>
